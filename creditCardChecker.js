@@ -24,12 +24,12 @@ const mystery5 = [4, 9, 1, 3, 5, 4, 0, 4, 6, 3, 0, 7, 2, 5, 2, 3]
 const batch = [valid1, valid2, valid3, valid4, valid5, invalid1, invalid2, invalid3, invalid4, invalid5, mystery1, mystery2, mystery3, mystery4, mystery5]
 
 // Checks if one card is valid
-// Returns true or false 
+// Returns true or false
 validateCred = (arr) => {
 
     //Check if card is an array, convert to array of numbers
     if (Array.isArray(arr) === false) {
-    arr = stringToNumber(arr)
+        arr = stringToNumber(arr);
     }
 
     let newArray = arr.slice()
@@ -72,7 +72,7 @@ const findInvalidCards = (arr) => {
 }
 
 // Check what companies cards are from.
-// Only checks for company, not validity 
+// Only checks for company, not validity
 // Can take in multiple cards in an array
 const idInvalidCardCompanies = (arr) => {
 
@@ -123,7 +123,7 @@ const stringToNumber = (string) => {
 }
 
 let stringOfNums = '4539, 6779, 0801, 6808'
-console.log(stringToNumber(stringOfNums)) 
+console.log(stringToNumber(stringOfNums))
 //[4, 5, 3, 9, 6, 7, 7, 9, 0, 8, 0, 1, 6, 8, 0, 8]
 
 console.log(validateCred(valid1))
